@@ -1,0 +1,123 @@
+/* Resetting default styles for all elements */
+/* {
+    max-width: 100%;
+    padding: 0px;
+    margin: 0px;
+} */
+
+/* Styling for the entire body */
+body {
+    background: rgb(10, 0, 0); /* Dark background color */
+    font-family: Arial, Helvetica, sans-serif; /* Font for the entire page */
+}
+
+/* Container for the entire page content */
+#Container {
+    width: 1100px; /* Width of the container */
+    margin: 0px auto; /* Center aligning the container */
+    border: 1px solid black; /* Border around the container */
+}
+
+/* Styling for the header */
+header {
+    background: rgb(0, 0, 0); /* Dark background color */
+    height: 100px; /* Height of the header */
+    width: 100%; /* Full width of the header */
+    text-align: center; /* Center aligning text inside header */
+    line-height: 100px; /* Vertical alignment of text */
+    color: rgb(0, 255, 255); /* Text color */
+    border-bottom: 2px solid white; /* Bottom border of the header */
+}
+
+/* Styling for the navigation bar */
+nav {
+    background: rgb(0, 255, 255); /* Light background color */
+    height: 50px; /* Height of the navigation bar */
+    border-bottom: 1px solid rgb(255, 252, 252); /* Bottom border of the navigation bar */
+}
+
+/* Styling for the navigation list items */
+nav ul li {
+    float: left; /* Float the list items to the left */
+    list-style: none; /* Remove default list styling */
+    margin: 10px; /* Margin around each list item */
+    line-height: 30px; /* Vertical alignment of text inside list item */
+}
+
+/* Clearing floats */
+.clearfix {
+    clear: both; /* Clear floats */
+}
+
+/* Styling for the main content area */
+#content {
+    float: left; /* Float the content area to the left */
+    width: 80%; /* Width of the content area */
+    background: rgb(0, 0, 0); /* Dark background color */
+    min-height: 470px; /* Minimum height of the content area */
+}
+
+/* Styling for the sidebar */
+aside {
+    float: left; /* Float the sidebar to the left */
+    width: calc(20% - 20px); /* Width of the sidebar */
+    background: rgb(0, 255, 255); /* Light background color */
+    min-height: 400px; /* Minimum height of the sidebar */
+    padding: 10px; /* Padding inside the sidebar */
+}
+
+/* Styling for individual articles */
+.article {
+    color: white; /* Text color for articles */
+    margin-top: 15px; /* Top margin of articles */
+    margin-bottom: 15px; /* Bottom margin of articles */
+    border-bottom: 1px solid white; /* Bottom border of articles */
+}
+
+/* Styling for article headings */
+.article h2 {
+    font-size: 23px; /* Font size of article headings */
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    #Container {
+        width: 100%; /* Adjust width to fill the entire viewport */
+    }
+
+    #content {
+        width: 100%; /* Make content area full width on smaller screens */
+        float: none; /* Remove float to stack content and sidebar vertically */
+    }
+
+    aside {
+        width: 100%; /* Make sidebar full width on smaller screens */
+        float: none; /* Remove float to stack content and sidebar vertically */
+        margin-top: 15px; /* Add margin to separate sidebar from content */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 70px; /* Adjust height of header for smaller screens */
+        line-height: 70px; /* Adjust line-height of header for smaller screens */
+    }
+
+    nav ul li {
+        margin: 5px; /* Adjust margin around navigation items for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        height: auto; /* Allow navigation bar to adjust height based on content */
+    }
+
+    nav ul li {
+        float: none; /* Remove float from navigation items */
+        display: block; /* Display navigation items as block elements */
+        text-align: center; /* Center align navigation items */
+        margin: 5px auto; /* Center margin for navigation items */
+        line-height: 40px; /* Vertical alignment of text inside list item */
+    }
+}
